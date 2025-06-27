@@ -1,9 +1,11 @@
+import streamlit as st
 import plotly.graph_objects as go
 
 # Data
 water_projects = 207
 non_water_total = 150
 
+# Create pie chart figure
 fig = go.Figure(go.Pie(
     labels=["Water Projects", "Other<br>Infrastructure"],
     values=[water_projects, non_water_total],
@@ -17,6 +19,7 @@ fig = go.Figure(go.Pie(
     insidetextfont=dict(color='black', size=14)
 ))
 
+# Layout settings
 fig.update_layout(
     title="Water vs Other Infrastructure Projects in 2024",
     title_font=dict(size=24),
@@ -28,3 +31,6 @@ fig.update_layout(
     ),
     showlegend=False
 )
+
+# ✅ Render in Streamlit
+st.plotly_chart(fig, use_container_width=True)
