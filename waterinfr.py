@@ -27,7 +27,7 @@ fig.update_layout(
         bgcolor='white',
         bordercolor='#B36924',
         font_size=18,
-        font_family='Arial'
+        font_family='Roboto, Arial, sans-serif',
     ),
     showlegend=False
 )
