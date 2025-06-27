@@ -28,5 +28,3 @@ fig.update_layout(
     ),
     showlegend=False
 )
-
-st.plotly_chart(fig, use_container_width=True)  # ✅ this will work
